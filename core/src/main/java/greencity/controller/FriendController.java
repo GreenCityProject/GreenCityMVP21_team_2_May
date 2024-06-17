@@ -110,7 +110,7 @@ public class FriendController {
         @ApiResponse(responseCode = "400", description = HttpStatuses.BAD_REQUEST),
         @ApiResponse(responseCode = "404", description = HttpStatuses.NOT_FOUND),
     })
-    @DeleteMapping()
+    @DeleteMapping("/delete")
     @ApiLocale
     public ResponseEntity<String> deleteFriend(
             @RequestParam("userId") Long userId,
