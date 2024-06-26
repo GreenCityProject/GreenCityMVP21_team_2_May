@@ -10,6 +10,7 @@ import java.time.ZonedDateTime;
 @Getter
 @Setter
 @EqualsAndHashCode
+@Builder
 public class RatingStatisticsDto {
     private Long id;
     private ZonedDateTime createDate;
