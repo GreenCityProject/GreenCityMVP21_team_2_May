@@ -1,5 +1,6 @@
 package greencity.dto.notification;
 
+import jakarta.validation.constraints.Min;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class NotificationDto {
     @NonNull
+    @Min(1)
     private Long id;
 
     @NonNull
