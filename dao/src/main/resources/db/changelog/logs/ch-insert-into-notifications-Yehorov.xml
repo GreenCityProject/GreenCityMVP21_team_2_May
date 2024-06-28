@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="yehoryehorov2" author="Yehor Yehorov">
+        <insert tableName="notifications">
+            <column name="user_id" valueNumeric="3"/>
+            <column name="sender_id" valueNumeric="4"/>
+            <column name="section" value="General"/>
+            <column name="message" value="Welcome to our service!"/>
+            <column name="timestamp" valueDate="2024-06-28T14:00:00"/>
+            <column name="is_read" valueBoolean="false"/>
+        </insert>
+        <insert tableName="notifications">
+            <column name="user_id" valueNumeric="5"/>
+            <column name="sender_id" valueNumeric="6"/>
+            <column name="section" value="Updates"/>
+            <column name="message" value="Check out our new features!"/>
+            <column name="timestamp" valueDate="2024-06-28T15:00:00"/>
+            <column name="is_read" valueBoolean="false"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -181,7 +181,6 @@
     <include file="db/changelog/logs/ch-update-column-status-in-users_friends-Koval.xml"/>
     <include file="db/changelog/logs/ch-insert-into-users-friends_Koval.xml"/>
     <include file="db/changelog/logs/ch-insert-into-habit-assign-Koval.xml"/>
-    <include file="db/changelog/logs/ch-insert-into-users-Koval.xml"/>
     <include file="db/changelog/logs/ch-create-table-friendship-request-Koval.xml"/>
     <include file="db/changelog/logs/ch-add-table-events-Kasarab.xml"/>
     <include file="db/changelog/logs/ch-add-table-event-images-Kasarab.xml"/>
@@ -196,5 +195,7 @@
     <include file="db/changelog/logs/ch-add-table-event-attenders-Kasarab.xml"/>
     <include file="db/changelog/logs/ch-add-columns-delete-events-comments-Kasarab.xml"/>
     <include file="db/changelog/logs/ch-add-table-events-comments-mentioned-users-Herchanivska.xml"/>
+    <include file="/db/changelog/logs/ch-add-table-notifications-Yehorov.xml"/>
+    <include file="/db/changelog/logs/ch-insert-into-notifications-Yehorov.xml"/>
 </databaseChangeLog>
 

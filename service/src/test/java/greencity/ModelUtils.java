@@ -17,6 +17,8 @@ import greencity.dto.habitfact.*;
 import greencity.dto.language.LanguageDTO;
 import greencity.dto.language.LanguageTranslationDTO;
 import greencity.dto.language.LanguageVO;
+import greencity.dto.notification.NotificationDto;
+import greencity.dto.notification.NotificationUserDto;
 import greencity.dto.ownsecurity.OwnSecurityVO;
 import greencity.dto.search.SearchNewsDto;
 import greencity.dto.shoppinglistitem.CustomShoppingListItemResponseDto;
@@ -31,6 +33,7 @@ import greencity.entity.event.EventAddress;
 import greencity.entity.event.EventDayInfo;
 import greencity.entity.event.EventImage;
 import greencity.entity.event.Event;
+import greencity.entity.notification.Notification;
 import greencity.enums.*;
 import greencity.message.EventEmailMessage;
 import org.springframework.mock.web.MockMultipartFile;
@@ -898,6 +901,40 @@ public class ModelUtils {
         return EventCommentMentionedUserDto.builder()
                 .id(2L)
                 .name("Username")
+                .build();
+    }
+
+    public static Notification getNotification(
+            Long id,
+            User user,
+            User sender,
+            String section,
+            String message) {
+        return Notification.builder()
+                .id(id)
+                .user(user)
+                .sender(sender)
+                .section(section)
+                .message(message)
+                .timestamp(LocalDateTime.now())
+                .isRead(false)
+                .build();
+    }
+
+    public static NotificationDto getNotificationDto(
+            Long id,
+            NotificationUserDto user,
+            NotificationUserDto sender,
+            String section,
+            String message) {
+        return NotificationDto.builder()
+                .id(id)
+                .user(user)
+                .sender(sender)
+                .section(section)
+                .message(message)
+                .timestamp(LocalDateTime.now())
+                .isRead(false)
                 .build();
     }
 }
